@@ -49,11 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_WaterSurface\Scripts\GalleryMaker.cs" />
+    <Compile Include="Assets\_MaterialShaders\scripts\Gallery.cs" />
+    <Compile Include="Assets\_MaterialShaders\scripts\shaderanalyze.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\_WaterSurface\Scripts\ObjectGalleryMaker.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\_MaterialShaders\Shaders\saten.shader" />
+    <None Include="Assets\_MaterialShaders\Shaders\velvet.shader" />
     <None Include="Assets\_WaterSurface\Shaders\BigWaveShader.shader" />
+    <None Include="Assets\_MaterialShaders\Shaders\LitSurface.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
