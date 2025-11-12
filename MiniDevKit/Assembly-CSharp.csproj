@@ -57,6 +57,7 @@
   <ItemGroup>
     <None Include="Assets\_MaterialShaders\Shaders\saten.shader" />
     <None Include="Assets\_MaterialShaders\Shaders\velvet.shader" />
+    <None Include="Assets\_Reflection\WaterReflectionShader.shader" />
     <None Include="Assets\_WaterSurface\Shaders\BigWaveShader.shader" />
     <None Include="Assets\_MaterialShaders\Shaders\LitSurface.shader" />
   </ItemGroup>
