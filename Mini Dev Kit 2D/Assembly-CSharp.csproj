@@ -48,13 +48,19 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.1.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_PlayerMovementSystem\Scripts\Core\Config\MovementSettings.cs" />
     <Compile Include="Assets\_SpriteDatabaseAnimation\_Editor\PerformanceSpawnerEditor.cs" />
     <Compile Include="Assets\_ObjectMovementSystem\Scripts\Core\Enums.cs" />
     <Compile Include="Assets\_SpriteDatabaseAnimation\_Scripts\SpriteDatabaseAnimator.cs" />
+    <Compile Include="Assets\_PlayerMovementSystem\Scripts\Core\Input\UserInput.cs" />
+    <Compile Include="Assets\_PlayerMovementSystem\Scripts\Core\PlayerStateMachine.cs" />
     <Compile Include="Assets\_SpriteDatabaseAnimation\_Editor\SpriteDatabasenAnimatorEditor.cs" />
     <Compile Include="Assets\_ObjectMovementSystem\Scripts\Core\DoTMover.cs" />
+    <Compile Include="Assets\_PlayerMovementSystem\Scripts\Core\MovementExecuter.cs" />
     <Compile Include="Assets\_ObjectMovementSystem\Scripts\Config\MovementDataSO.cs" />
+    <Compile Include="Assets\_PlayerMovementSystem\Scripts\Core\PlayerMovementController.cs" />
     <Compile Include="Assets\_SpriteDatabaseAnimation\_Scripts\PerformanceSpawner.cs" />
+    <Compile Include="Assets\_PlayerMovementSystem\Scripts\AnimationStateObserver.cs" />
     <Compile Include="Assets\_ObjectMovementSystem\Scripts\Controller\MovementController.cs" />
   </ItemGroup>
   <ItemGroup>
