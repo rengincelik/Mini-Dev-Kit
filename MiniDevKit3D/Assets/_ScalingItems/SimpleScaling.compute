@@ -1,0 +1,50 @@
+#pragma kernel SimpleScaling;
+
+struct ItemData{
+    float3 position;
+    float size;
+    float4 color;
+};
+
+uint x_Count;
+uint y_Count;
+uint z_Count;
+float size;
+float4 color;
+
+RWStructuredBuffer<ItemData> itemBuffer;
+
+[numthreads(64,1,1)]
+void SimpleScaling(uint id: SV_DispatchThreadID)
+{
+    uint i = id.x;
+    uint spawnCount=x_Count*y_Count*z_Count;
+    if(i >= spawnCount) return;
+
+    
+    uint x_idx = i % x_Count;
+    uint y_z_plane_count = x_Count * y_Count;
+    uint z_idx = i / y_z_plane_count;
+    uint y_idx = (i % y_z_plane_count) / x_Count;
+
+    
+    float3 pos;
+    
+    // X Position
+    float x_offset = (float)(x_Count - 1) * size / 2.0;
+    pos.x = (float)x_idx * size - x_offset;
+
+    // Y Position
+    float y_offset = (float)(y_Count - 1) * size / 2.0;
+    pos.y = (float)y_idx * size - y_offset;
+    
+    // Z Position
+    float z_offset = (float)(z_Count - 1) * size / 2.0;
+    pos.z = (float)z_idx * size - z_offset;
+
+    ItemData item;
+    item.position = pos;
+    item.size = size;
+    item.color = color;
+    itemBuffer[i] = item;
+}
