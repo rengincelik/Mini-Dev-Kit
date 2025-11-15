@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Dev Kit - Rengin Çelik</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 2px solid #00d4ff;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #00d4ff;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        
+        header p {
+            font-size: 1.3em;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+        }
+        
+        nav {
+            margin-top: 30px;
+        }
+        
+        nav a {
+            color: #00d4ff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+            background: #151515;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #252525;
+            transition: all 0.3s;
+        }
+        
+        section:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: #00d4ff;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, transparent);
+        }
+        
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tool-card {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #252525;
+            transition: all 0.3s;
+        }
+        
+        .tool-card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+        }
+        
+        .tool-card h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .tool-card p {
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+        
+        .tool-card ul {
+            list-style: none;
+        }
+        
+        .tool-card li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        .tool-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .link-card {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #252525;
+            text-align: center;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .link-card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+        }
+        
+        .link-card h3 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .link-card p {
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            background: #0a0a0a;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #252525;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            header p { font-size: 1.1em; }
+            section { padding: 25px; }
+            .tool-grid, .links-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Mini Dev Kit</h1>
+    <p>Reusable Development Tools & Systems</p>
+    <nav>
+        <a href="https://rengincelik.github.io/RenginCelik/">← Back to Portfolio</a>
+    </nav>
+</header>
+
+<div class="container">
+    <section>
+        <h2>About the Project</h2>
+        <p>Mini Dev Kit is a collection of reusable tools and systems designed to accelerate game development workflows. Each tool is modular, well-documented, and ready to be integrated into any Unity project.</p>
+        <p style="margin-top: 15px;">Built with best practices in mind, focusing on performance, maintainability, and ease of use for rapid prototyping and production pipelines.</p>
+    </section>
+
+    <section>
+        <h2>Tools & Systems</h2>
+        <div class="tool-grid">
+            <!-- Buraya projelerini ekleyeceksin -->
+            <div class="tool-card">
+                <h3>Tool Name 1</h3>
+                <p>Brief description of what this tool does and how it helps development.</p>
+                <ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
+            </div>
+            
+            <div class="tool-card">
+                <h3>Tool Name 2</h3>
+                <p>Brief description of what this tool does and how it helps development.</p>
+                <ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
+            </div>
+            
+            <div class="tool-card">
+                <h3>Tool Name 3</h3>
+                <p>Brief description of what this tool does and how it helps development.</p>
+                <ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Source Code & Documentation</h2>
+        <div class="links-grid">
+            <a href="#" target="_blank" class="link-card">
+                <h3>📂 GitHub Repo</h3>
+                <p>View full source code</p>
+            </a>
+            <a href="#" target="_blank" class="link-card">
+                <h3>📖 Documentation</h3>
+                <p>Setup guides and examples</p>
+            </a>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>© 2025 Rengin Çelik</p>
+</footer>
+</body>
+</html>
