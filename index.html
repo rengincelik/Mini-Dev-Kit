@@ -91,91 +91,117 @@
             background: linear-gradient(90deg, #00d4ff, transparent);
         }
         
-        .tool-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .tool-card {
+        .accordion-item {
             background: #1a1a1a;
-            padding: 25px;
+            margin-bottom: 15px;
             border-radius: 8px;
             border: 1px solid #252525;
+            overflow: hidden;
             transition: all 0.3s;
         }
         
-        .tool-card:hover {
+        .accordion-item:hover {
             border-color: #00d4ff;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
         }
         
-        .tool-card h3 {
+        .accordion-header {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .accordion-header:hover {
+            background: rgba(0, 212, 255, 0.05);
+        }
+        
+        .accordion-header h3 {
             color: #00d4ff;
-            margin-bottom: 15px;
             font-size: 1.3em;
+            margin: 0;
         }
         
-        .tool-card p {
+        .accordion-icon {
+            color: #00d4ff;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+        
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-inner {
+            padding: 0 25px 25px 25px;
+        }
+        
+        .accordion-inner p {
             color: #b0b0b0;
             margin-bottom: 15px;
         }
         
-        .tool-card ul {
-            list-style: none;
+        .tool-image {
+            width: 100%;
+            height: 200px;
+            background: #252525;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
         }
         
-        .tool-card li {
-            padding-left: 20px;
+        .tool-features {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .tool-features li {
+            padding-left: 25px;
             position: relative;
             margin-bottom: 8px;
             color: #888;
-            font-size: 0.9em;
         }
         
-        .tool-card li::before {
-            content: '•';
+        .tool-features li::before {
+            content: '▹';
             position: absolute;
             left: 0;
             color: #00d4ff;
-        }
-        
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .link-card {
-            background: #1a1a1a;
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #252525;
-            text-align: center;
-            transition: all 0.3s;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        
-        .link-card:hover {
-            border-color: #00d4ff;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
-        }
-        
-        .link-card h3 {
-            color: #00d4ff;
-            margin-bottom: 10px;
             font-size: 1.2em;
         }
         
-        .link-card p {
-            color: #888;
-            font-size: 0.9em;
+        .tool-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tool-links a {
+            padding: 10px 20px;
+            background: #252525;
+            color: #00d4ff;
+            text-decoration: none;
+            border-radius: 6px;
+            border: 1px solid #333;
+            transition: all 0.3s;
+        }
+        
+        .tool-links a:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: #00d4ff;
+            transform: translateY(-2px);
         }
         
         footer {
@@ -190,7 +216,7 @@
             header h1 { font-size: 2em; }
             header p { font-size: 1.1em; }
             section { padding: 25px; }
-            .tool-grid, .links-grid { grid-template-columns: 1fr; }
+            .accordion-header h3 { font-size: 1.1em; }
         }
     </style>
 </head>
@@ -211,46 +237,124 @@
     </section>
 
     <section>
-        <h2>Tools & Systems</h2>
-        <div class="tool-grid">
-            <!-- Buraya projelerini ekleyeceksin -->
-            <div class="tool-card">
+        <h2>2D Tools</h2>
+        
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
                 <h3>Tool Name 1</h3>
-                <p>Brief description of what this tool does and how it helps development.</p>
-                <ul>
-                    <li>Feature 1</li>
-                    <li>Feature 2</li>
-                    <li>Feature 3</li>
-                </ul>
+                <span class="accordion-icon">▼</span>
             </div>
-            
-            <div class="tool-card">
+            <div class="accordion-content">
+                <div class="accordion-inner">
+                    <p>Brief description of what this 2D tool does and how it helps development.</p>
+                    <div class="tool-image">Screenshot / GIF Placeholder</div>
+                    <ul class="tool-features">
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <div class="tool-links">
+                        <a href="#">📦 Unity Package</a>
+                        <a href="#">🔗 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
                 <h3>Tool Name 2</h3>
-                <p>Brief description of what this tool does and how it helps development.</p>
-                <ul>
-                    <li>Feature 1</li>
-                    <li>Feature 2</li>
-                    <li>Feature 3</li>
-                </ul>
+                <span class="accordion-icon">▼</span>
             </div>
-            
-            <div class="tool-card">
-                <h3>Tool Name 3</h3>
-                <p>Brief description of what this tool does and how it helps development.</p>
-                <ul>
-                    <li>Feature 1</li>
-                    <li>Feature 2</li>
-                    <li>Feature 3</li>
-                </ul>
+            <div class="accordion-content">
+                <div class="accordion-inner">
+                    <p>Brief description of what this 2D tool does and how it helps development.</p>
+                    <div class="tool-image">Screenshot / GIF Placeholder</div>
+                    <ul class="tool-features">
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <div class="tool-links">
+                        <a href="#">📦 Unity Package</a>
+                        <a href="#">🔗 GitHub</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    
+    <section>
+        <h2>3D Tools</h2>
+        
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <h3>Tool Name 3</h3>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-inner">
+                    <p>Brief description of what this 3D tool does and how it helps development.</p>
+                    <div class="tool-image">Screenshot / GIF Placeholder</div>
+                    <ul class="tool-features">
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <div class="tool-links">
+                        <a href="#">📦 Unity Package</a>
+                        <a href="#">🔗 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <h3>Tool Name 4</h3>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-inner">
+                    <p>Brief description of what this 3D tool does and how it helps development.</p>
+                    <div class="tool-image">Screenshot / GIF Placeholder</div>
+                    <ul class="tool-features">
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <div class="tool-links">
+                        <a href="#">📦 Unity Package</a>
+                        <a href="#">🔗 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <footer>
     <p>© 2025 Rengin Çelik</p>
 </footer>
+
+<script>
+function toggleAccordion(header) {
+    const item = header.parentElement;
+    const content = item.querySelector('.accordion-content');
+    const isActive = item.classList.contains('active');
+    
+    // Close all accordions
+    document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.accordion-content').style.maxHeight = null;
+    });
+    
+    // Open clicked accordion if it wasn't active
+    if (!isActive) {
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+    }
+}
+</script>
 </body>
 </html>
