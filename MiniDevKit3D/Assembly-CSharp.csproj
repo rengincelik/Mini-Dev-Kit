@@ -66,12 +66,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+    <None Include="Assets/_SBS/SBS - Noise Texture Pack - 128x128/License.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/_3D_GPU_Instancing/Shaders/matris.compute" />
     <None Include="Assets/_MaterialShaders/Shaders/saten.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets/_3D_GPU_Instancing/Shaders/test.shader" />
     <None Include="Assets/_Grass/Shaders/GrassInstancing.shader" />
+    <None Include="Assets/_SBS/SBS - Abstract Texture Pack - 512x512/License.txt" />
     <None Include="Assets/_Grass/Shaders/GrassCompute.compute" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/_Grass/Shaders/GrassGPU.shader" />
@@ -98,12 +100,14 @@
     <None Include="Assets/_RandomSpawn/RandomSpawning.shader" />
     <None Include="Assets/_SizeChange/SizeChange.compute" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets/_SBS/SBS - Abstract Noise Pack - 128x128/License.txt" />
     <None Include="Assets/_ScalingItems/SimpleScaling.compute" />
     <None Include="Assets/_MaterialShaders/Shaders/LitSurface.shader" />
     <None Include="Assets/_RandomSpawn/RandomSpawning.compute" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/_SBS/SBS - Gradient Texture Pack - 512x512/License.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
   </ItemGroup>
