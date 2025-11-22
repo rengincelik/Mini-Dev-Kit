@@ -63,6 +63,13 @@
     <Compile Include="Assets/_ObjectMovementSystem/Scripts/Controller/MovementController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/_SBS/SBS - Abstract Texture Pack - 512x512/License.txt" />
+    <None Include="Assets/_SBS/SBS - Noise Texture Pack - 128x128/License.txt" />
+    <None Include="Assets/_SBS/SBS - Gradient Texture Pack - 512x512/License.txt" />
+    <None Include="Assets/_Reflection/WaterReflectionShader.shader" />
+    <None Include="Assets/_SBS/SBS - Abstract Noise Pack - 128x128/License.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>/home/nedogan/Unity/Hub/Editor/6000.1.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
       <Private>False</Private>
