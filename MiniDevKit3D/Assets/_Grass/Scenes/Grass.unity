@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &277759179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 8258637479391866517, guid: 5d70407183cd9be42b2e33530ce1baf0, type: 3}
-  spawnCount: 100000
+  spawnCount: 814
   areaSize: {x: 1000, y: 1, z: 1000}
   randomRotation: 0
   rotationMin: {x: 0, y: 0, z: 0}
@@ -204,7 +204,7 @@ MonoBehaviour:
   computeShader: {fileID: 7200000, guid: 81aee9e18a2ab32469961a73bb39cec3, type: 3}
   grassMaterial: {fileID: 2100000, guid: fa67beb77ceab1a4daeafcc254131beb, type: 2}
   grassObject: {fileID: 688007709964273759, guid: c4222eb0f2f42cb44943395138816c15, type: 3}
-  grassCount: 100000
+  grassCount: 1000
   areaSize: {x: 1000, y: 1000}
   scaleMin: 0.5
   scaleMax: 3
@@ -390,7 +390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1547655243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,7 +610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2112876305
 MonoBehaviour:
   m_ObjectHideFlags: 0

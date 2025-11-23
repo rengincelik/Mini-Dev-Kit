@@ -1,46 +1,61 @@
-Shader "Custom/GPUInstancingTest"
+Shader "Custom/URP_GPUInstancingTest"
 {
     Properties
     {
-        _Color("Color", Color) = (1,0,0,1) // kırmızı varsayılan
+        _BaseColor("Base Color", Color) = (1,0,0,1)
     }
+
     SubShader
     {
-        Tags { "RenderType" = "Opaque" }
+        Tags { "RenderPipeline"="UniversalRenderPipeline" "RenderType"="Opaque" }
+
         Pass
         {
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
+            Name "Forward"
+            Tags { "LightMode"="UniversalForward" }
+
+            HLSLPROGRAM
+            #pragma vertex Vert
+            #pragma fragment Frag
             #pragma multi_compile_instancing
-            #include "UnityCG.cginc"
+            #pragma target 4.5
 
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+
+            // StructuredBuffer
             StructuredBuffer<float3> _Positions;
-            float4 _Color;
 
-            struct appdata
+            // Material renk
+            float4 _BaseColor;
+
+            struct Attributes
             {
-                float3 vertex : POSITION;
+                float3 positionOS : POSITION;
             };
 
-            struct v2f
+            struct Varyings
             {
-                float4 pos : SV_POSITION;
+                float4 positionHCS : SV_POSITION;
             };
 
-            v2f vert(appdata v, uint id : SV_InstanceID)
+            Varyings Vert(Attributes IN, uint instanceID : SV_InstanceID)
             {
-                v2f o;
-                float3 worldPos = _Positions[id];
-                o.pos = UnityObjectToClipPos(float4(v.vertex + worldPos, 1.0));
-                return o;
+                Varyings OUT;
+
+                float3 instancePos = _Positions[instanceID];
+
+                float3 worldPos = TransformObjectToWorld(IN.positionOS) + instancePos;
+                OUT.positionHCS = TransformWorldToHClip(worldPos);
+
+                return OUT;
             }
 
-            fixed4 frag(v2f i) : SV_Target
+            half4 Frag(Varyings IN) : SV_Target
             {
-                return _Color;
+                return _BaseColor;
             }
-            ENDCG
+
+            ENDHLSL
         }
     }
 }

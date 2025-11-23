@@ -197,7 +197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2274827e1a7b3c94b97eb05fd96dd8dc, type: 2}
+  - {fileID: 2100000, guid: 2cd38ce22f7b563aeab835c542331b2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -437,7 +437,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 95989386045431c36ac488694d952153, type: 2}
+  - {fileID: 2100000, guid: 7da1ea8a676e759708008b6c47dfd1db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   computeShader: {fileID: 7200000, guid: f011ba3734a93acf6bb20b0aeef68c42, type: 3}
-  instanceCount: 1000
+  instanceCount: 100
   areaSize: {x: 50, y: 0, z: 50}
   rotationMin: {x: 0, y: 0, z: 0}
   rotationMax: {x: 0, y: 360, z: 0}
