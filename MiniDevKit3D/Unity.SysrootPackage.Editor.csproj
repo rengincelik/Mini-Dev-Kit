@@ -17,7 +17,7 @@
     <LangVersion>9.0</LangVersion>
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
-    <AssemblyName>Unity.AI.Navigation.Editor.ConversionSystem</AssemblyName>
+    <AssemblyName>Unity.SysrootPackage.Editor</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -48,23 +48,12 @@
     <Analyzer Include="/home/nedogan/Unity/Hub/Editor/6000.1.14f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/ConverterItemInfo.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/ConverterItemDescriptor.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/SystemConvertersEditor.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/SystemConverter.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/InitializeConverterContext.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/EditorStyles.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/AssemblyInfo.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/RunItemContext.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/SystemConverterContainer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.sysroot@7bbbb9339c14/Editor/NiceIO.cs" />
+    <Compile Include="Library/PackageCache/com.unity.sysroot@7bbbb9339c14/Editor/AssemblyInfo.cs" />
+    <Compile Include="Library/PackageCache/com.unity.sysroot@7bbbb9339c14/Editor/Unity.SysrootPackage.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/converter_widget.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/Unity.AI.Navigation.Editor.ConversionSystem.asmdef" />
-    <None Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/converter_widget_item.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/converter_widget.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/converter_editor.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.navigation@eb5635ad590d/Editor/ConversionSystem/converter_editor.uss" />
+    <None Include="Library/PackageCache/com.unity.sysroot@7bbbb9339c14/Editor/Unity.SysrootPackage.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
